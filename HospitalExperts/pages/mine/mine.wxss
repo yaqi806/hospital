@@ -1,0 +1,141 @@
+/* pages/mine/mine.wxss */
+page{
+  background-color: #f9f9f9;
+}
+
+.mine-adv{
+  width:750rpx; height: 250rpx;
+}
+.mine-adv image{
+  width:inherit; height: inherit
+}
+
+.mine-info{
+  width:690rpx; height: 393rpx;
+  background-color: #fff;
+  margin:-122rpx auto 30rpx;
+  border-radius: 10rpx;
+  position:relative;
+  box-shadow: 0 0 5rpx #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mine-info .userinfo{
+  width:200rpx; height: 200rpx;
+}
+.mine-info .userinfo .userAuthorize{
+  margin-top: 50rpx;
+}
+.mine-info .userinfo .userinfo-avatar{
+  width:200rpx; height: 200rpx;
+  margin-top: -100rpx;
+  border-radius: 50%;
+}
+.mine-info .userinfo .userinfo-nickname{
+  text-align: center;
+  font-weight: bold;
+}
+.mine-info .userinfo .userinfo-sex{
+  color:#888;
+  font-size: 26rpx;
+  text-align: center;
+  margin-top: 22rpx;
+}
+
+.mine-info .user-myphoto-myappoint{
+  width:100%; height: 120rpx;
+  position: absolute;
+  bottom:0;
+  border-top:solid 1px #eee;
+  display: flex;
+  text-align: center;
+}
+.mine-info .user-myphoto-myappoint .myphoto{
+  flex-basis:50%; height: inherit;
+  border-right: solid 1px #eee;
+}
+.mine-info .user-myphoto-myappoint .myappoint{
+  flex-basis:50%; height: inherit;
+}
+.mine-info .user-myphoto-myappoint .title{
+  color:#666;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+.mine-info .user-myphoto-myappoint .num{
+  font-size: 26rpx;
+  color:#000;
+  margin-top: 10rpx;
+}
+
+.mine-btn{
+  width:690rpx; height: 88rpx;
+  background-color: #5ac0ce;
+  line-height: 88rpx;
+  color:#fff;
+  margin:0 auto 30rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.mine-btn image{
+  width:46rpx; height: 35rpx;
+  vertical-align: text-top;
+}
+
+/* 显示我的照片 */
+.myPhotos{
+  width:690rpx; height: auto;
+  margin:30rpx auto 20rpx;
+  background-color: #fff;
+  border-radius: 5rpx;
+  box-shadow: 0 0 5rpx #ccc;
+  box-sizing: border-box;
+  padding:18rpx;
+}
+.myPhotos .dt{
+  font-size: 26rpx;
+  margin-bottom: 20rpx;
+}
+.myPhotos image{
+  width:155rpx; height: 155rpx;
+  margin-right: 10rpx;
+}
+.myPhotos .spx{
+  border-bottom: solid 1px #ddd;
+  margin:20rpx 0
+}
+.myPhotos .spx:nth-last-of-type(1){
+  display: none;
+}
+
+/* 遮罩层 */
+.mask{
+  position: absolute;
+  top:0; left:0;
+  width:100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 5000;
+}
+.mask .ts{
+  width:90%; height: 300rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin:0 auto;
+  text-align: center;
+  box-sizing: border-box;
+  padding:50rpx;
+  position: relative;
+  top:300rpx;
+  font-size: 40rpx;
+}
+.mask .ts .btn{
+  width:50%; height: 80rpx;
+  background-color: #5ac0ce;
+  margin:50rpx auto 0;
+  line-height: 80rpx;
+  color:#fff;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+}

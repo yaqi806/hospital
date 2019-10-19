@@ -1,0 +1,47 @@
+<!--pages/mine/my-appoint/my-appoint.wxml-->
+<view class="title">
+  我的预约共有<text style="color:#5ac0ce;font-weight:bold;">{{myAppoint.num}}</text>个
+</view>
+
+<block wx:for="{{myAppoint.content}}" wx:for-item="item" wx:key="idx">
+  <view class="appoint">
+
+    <view class="one">
+      <view class="tp"><image src="{{url}}{{item.tp}}" class="hospitalImage"></image></view>
+      <view class="info">
+        <view style="font-weight:bold;">{{item.hname}}</view>
+        <view>{{item.address}}</view>
+      </view>      
+    </view>
+
+    <view class="two">
+      <image src="../../../images/myApp01.jpg"></image>
+      <text class="bt">预约科室：</text>
+      <text class="wb">{{item.disc}}</text>
+    </view>
+
+    <view class="two">
+      <image src="../../../images/myApp02.jpg"></image>
+      <text class="bt">预约专家：</text>
+      <text class="wb">{{item.name}}</text>
+      <text style="float:right" catchtap='showExpert' data-expert-id="{{item.exid}}">查看专家 ></text>
+    </view>
+
+    <view class="two">
+      <image src="../../../images/myApp03.jpg"></image>
+      <text class="bt">就诊日期：</text>
+      <text class="wb">{{item.dt}}（周{{item.wd}}）{{item.aph}}</text>
+    </view>
+
+    <view class="opa" wx:if="{{item.status==0}}">
+      <view class="btn01" catchtap='cancelAppoint' data-ap-id="{{item.apid}}">取消预约</view>
+      <view class="btn02" catchtap='cancelPhone'>电话取消</view>
+    </view>
+
+    <view class="status" wx:if="{{item.status==0}}"><image src="../../../images/status01.jpg"></image> </view>
+    <view class="status" wx:if="{{item.status==1}}"><image src="../../../images/status02.jpg"></image> </view>
+    <view class="status" wx:if="{{item.status==2}}"><image src="../../../images/status03.jpg"></image> </view>
+
+  </view>
+</block>
+ 

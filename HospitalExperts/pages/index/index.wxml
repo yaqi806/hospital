@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="adv" catchtap='toAdv'>
+    <image src="../../images/adv.png"></image>
+  </view>
+
+  <view class="selectProject">
+    <view class="title">
+      <image src="../../images/icon.jpg" class="icon"></image>
+      <text class="title">精选专题</text>
+    </view>
+
+    <view class="carousel">
+      <swiper circular="true" bindchange="swiperChange">
+        <block wx:for="{{carouselData}}" wx:for-item="item" wx:key="index">
+          <swiper-item data-banner-id="{{item.banid}}" catchtap='bannerDetail'>
+            <image src="{{imgUrl}}{{item.pic}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+
+      <view class="dots">
+        <block wx:for="{{carouselData}}" wx:for-item="item" wx:key="index">
+          <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+        </block>
+      </view>
+
+    </view> 
+  </view>
+
+  <view class="project">
+    <view class="title">
+      <image src="../../images/icon.jpg" class="icon"></image>
+      <text class="title">专题推荐</text>
+    </view>
+
+    <block wx:for="{{tempData}}" wx:for-item="item" wx:key="index">
+      <view class="projectItem" data-pro-id="{{item.exid}}" catchtap='projectDetail'>
+        <image src="{{url}}{{item.pic}}"></image>
+        <view class="content">
+          <view class="first"><text class="project-title">{{item.title}}</text></view>
+          <view class="second">
+            <text class="project-doctor">{{item.name}}</text> |
+            <text class="project-pos">{{item.pos}}</text>
+          </view>
+          <view class="third"><text class="project-focuson">{{item.focuson}}人已关注</text></view>
+        </view>
+      </view>
+    </block>
+
+    
+  </view>
+
+</view>

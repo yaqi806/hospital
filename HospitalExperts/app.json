@@ -1,0 +1,66 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/active/active",
+    "pages/index/project-detail/project-detail",
+    "pages/test/test",
+    "pages/test/testTopic/testTopic",
+    "pages/appoint/appoint",
+    "pages/appoint/appoint-detail/appoint-detail",
+    "pages/appoint/expert-detail/expert-detail",
+    "pages/appoint/appoint-ok/appoint-ok",
+    "pages/healthy/healthy",
+    "pages/healthy/healthy-detail/healthy-detail",
+    "pages/mine/mine",
+    "pages/mine/upload/upload",
+    "pages/mine/photo-detail/photo-detail",
+    "pages/mine/my-appoint/my-appoint",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "color": "#707070",
+    "selectedColor": "#65c4d1",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "list": [
+      {
+        "text": "专题",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tabs/project.jpg",
+        "selectedIconPath": "images/tabs/project-on.jpg"
+      },
+      {
+        "text": "自测",
+        "pagePath": "pages/test/test",
+        "iconPath": "images/tabs/test.jpg",
+        "selectedIconPath": "images/tabs/test-on.jpg"
+      },
+      {
+        "text": "预约",
+        "pagePath": "pages/appoint/appoint",
+        "iconPath": "images/tabs/appoint.jpg",
+        "selectedIconPath": "images/tabs/appoint-on.jpg"
+      },
+      {
+        "text": "健康",
+        "pagePath": "pages/healthy/healthy",
+        "iconPath": "images/tabs/healthy.jpg",
+        "selectedIconPath": "images/tabs/healthy-on.jpg"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/mine/mine",
+        "iconPath": "images/tabs/mine.jpg",
+        "selectedIconPath": "images/tabs/mine-on.jpg"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

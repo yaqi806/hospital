@@ -1,0 +1,54 @@
+/* pages/test/test.wxss */
+page{
+  background-color: #f6f6f6;
+}
+
+.test-adv{
+  width:690rpx; height: 155rpx;
+  margin:30rpx auto 27rpx;
+}
+.test-adv image{
+  width:inherit; height: inherit
+}
+
+.test-box{
+  width:690rpx; height: 600rpx;
+  margin:0 auto;
+
+}
+.test-box .item{
+  width:219rpx; height: 285rpx;
+  background-color: #fff;
+  box-shadow: 0 0 5px #eee;
+  box-sizing: border-box;
+  padding:10rpx;
+  text-align: center;
+  float:left;
+  margin-right: 10rpx;
+}
+.text-box .item:nth-child(3n){
+  margin-right: 0;
+}
+.test-box .item image{
+  width:195rpx; height: 110rpx;
+}
+.test-box .item .test-title{
+  font-size: 30rpx;
+  margin-bottom:5rpx;
+  margin-top: -5rpx;
+}
+.test-box .item .test-description{
+  font-size: 24rpx;
+  color: #878787;
+  margin-bottom: 10rpx;
+}
+.test-box .item .test-btn{
+  width:150rpx; height: 50rpx;
+  margin:0 auto;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  color:#5bbfce;
+  border:solid 1px #5bbfce;
+  border-radius: 25rpx;
+}

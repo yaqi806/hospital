@@ -1,0 +1,114 @@
+/* pages/healthy/healthy-detail/healthy-detail.wxss */
+page{
+  box-sizing: border-box;
+  padding:20rpx;
+}
+.title{
+  font-weight: bold;
+}
+.source{
+  height: 110rpx;
+  line-height: 110rpx;
+  font-size: 30rpx;
+  color:#888888;
+  border-bottom: dashed 1px #bfbfbf;
+  margin-bottom: 30rpx;
+}
+.source .hname{
+  margin-right: 25rpx;
+}
+.content{
+  color:#333;
+  margin-bottom: 30rpx;
+  font-size: 26rpx;
+  text-align: justify;
+  font-family: Microsoft YaHei;
+  line-height: 50rpx;
+}
+
+.temp-adv{
+  width:690rpx; height: 157rpx;
+  margin:0 auto 30rpx;
+}
+.temp-adv image{
+  width:690rpx; height: 157rpx;
+  text-align: center;
+}
+
+.forward{
+  width:690rpx; height: 100rpx;
+  background-color: #f1f6fa;
+  margin:0 auto 30rpx;
+  line-height:100rpx;
+  /* display: flex; */
+  font-size: 24rpx;
+  /* align-items: center; */
+  padding-left: 20rpx;
+}
+.forward button{
+  display:inline-block;
+  vertical-align: middle;
+  height: 50rpx;
+  text-align: center;
+  background-color: #fff;
+  border:solid 1px #bfbfbf;
+  line-height: 50rpx;
+  border-radius: 25rpx;
+  box-sizing: border-box;
+  padding:0 20rpx;
+  margin-right: 10rpx;
+  font-size: 24rpx;
+}
+.forward .qq image,
+.forward .friend image{
+  width:30rpx; height: 30rpx;
+  vertical-align: middle;
+}
+.forward .quan image{
+  width:33rpx; height: 30rpx;
+  vertical-align: middle;
+}
+
+.about{
+}
+.about .title{
+  width:130rpx; height: 50rpx;
+  line-height: 50rpx;
+  border-bottom: solid 1px #ddd;
+  text-align: center;
+  border-bottom:solid 2px #59c1cc;
+  color:#59c1cc;
+  font-size: 30rpx;
+}
+
+.about .content{
+  background-color: #f9f9f9;
+}
+.about .content .item{
+  height:70rpx;
+  line-height: 70rpx;
+  font-size: 30rpx;
+  border-bottom:solid 1px #ddd;
+  text-indent: 20rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.about .content .item:nth-child(5){
+  border-bottom: none;
+}
+.adv{
+  width:690rpx; height: 220rpx;
+  margin:0 auto 20rpx;
+}
+.adv image{
+  width: inherit; height: inherit;
+}
+
+.ewm{
+  width:690rpx; height: 374rpx;
+  margin:0 auto;
+}
+.ewm image{
+  width: inherit; height: inherit;
+}

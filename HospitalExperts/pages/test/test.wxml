@@ -1,0 +1,15 @@
+<!--pages/test/test.wxml-->
+<view class="test-adv">
+  <image src="../../images/test-adv.jpg"></image>
+</view>
+
+<view class="test-box">
+  <block wx:for="{{tempData}}" wx:for-item="item" wx:key="index">  
+    <view class="item" data-test-id="{{item.tid}}" catchtap='toTopic'>
+      <image src="{{url}}{{item.thumb}}"></image>
+      <view class="test-title"><text>{{item.title}}</text></view>
+      <view class="test-description"><text>{{item.description}}</text></view>
+      <view class="test-btn">点击测试</view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,34 @@
+<!--pages/mine/photo-detail/photo-detail.wxml-->
+<view class="pic">
+  <swiper circular="true">
+    <block wx:for="{{myPhoto}}" wx:for-item="item" wx:key="index">
+      <swiper-item>
+        <image src="{{url}}{{item.fname}}" mode="aspectFit"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="picInfo">
+  <view class="single">
+    <view class="ts">检查报告：</view><view class="nr">{{myPhoto[0].reports}}</view>
+  </view>
+  <view class="single">
+     <view class="ts">诊断描述： </view><view class="nr">{{myPhoto[0].descriptions}}</view>
+  </view>
+  <view class="single">
+     <view class="ts">备注信息： </view><view class="nr">{{myPhoto[0].others}}</view>
+  </view>
+</view>
+
+<view class="opa">
+  <button class="btn" open-type='share'><image src="../../../images/photo-forward.jpg"></image></button>
+  <image src="../../../images/photo-delete.jpg" catchtap='photoDelete'></image>
+</view>
+
+<view class="mask" wx:if="{{maskShow}}">
+  <view class="ts">
+    <text>照片删除成功！</text>
+    <view class="btn" catchtap='closeMask'>返回</view>
+  </view>
+</view> 

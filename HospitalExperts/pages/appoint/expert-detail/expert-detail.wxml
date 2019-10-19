@@ -1,0 +1,59 @@
+<!--pages/appoint/expert-detail/expert-detail.wxml-->
+<view class="top"></view>
+
+<view class="expert-info">
+  <image src="../../../images/exportBg.png" class="ebg"></image>
+  <view class="expert-pic">
+    <image src="{{url}}{{tempData[0].pic}}"></image>
+  </view>
+  <view class="expert-first">
+    <text class="exname">{{tempData[0].name}}</text>
+    <view class="pos">{{tempData[0].pos}}</view>
+    <view class="disc">{{tempData[0].disc}}</view>
+  </view>
+
+  <view class="expert-hospital">
+    <image src="../../../images/hos.png"></image>
+    <text class="hos">坐诊：{{tempData[0].hospital}}</text>
+  </view>
+
+  <view class="dibu">
+    <view class="score">
+      <image src="../../../images/score.jpg"></image>
+      评分：{{tempData[0].score}}分</view>
+    <view class="reserve">
+      <image src="../../../images/reserve.jpg"></image>
+      预约量：{{tempData[0].reserve}}
+    </view>
+  </view>
+</view>
+
+<view class="goodat">
+  <view class="title"><image src="../../../images/goodat.jpg"></image> 擅长治疗</view>
+  <view class="content">{{tempData[0].goodat}}</view>
+</view>
+
+<view class="intro">
+  <view class="title"><image src="../../../images/intro.jpg"></image> 专家介绍</view>
+  <view class="content">{{tempData[0].intro}}</view>
+</view>
+
+<view class="science" wx:if="{{scienceData.length!=0}}">
+  <view class="title"><image src="../../../images/science.png"></image>学术访谈</view>
+  <view class="carousel">
+    <swiper bindchange="swiperChange">
+      <block wx:for="{{scienceData}}" wx:for-item="item" wx:key="index">
+        <swiper-item data-pro-id="{{item.esid}}" >
+          <image src="{{imgUrl}}{{item.sciencepic}}" mode="widthFix"></image>
+          <view style="margin-top:10rpx;font-size:20rpx;">{{item.title}}</view>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="dots">
+      <block wx:for="{{scienceData}}" wx:for-item="item" wx:key="index">
+        <view class="dot{{index == swiperCurrent ? ' active' : ''}}"></view>
+      </block>
+    </view>
+  </view> 
+</view>

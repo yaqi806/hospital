@@ -1,0 +1,178 @@
+/* pages/index/active/active.wxss */
+page{
+  background-color: #34b9b6;
+}
+
+.active{
+  width:750rpx; height: 510rpx;
+  position: relative;
+}
+.active .num{
+  position: absolute;
+  top:298rpx; left:236rpx;
+  color:#eee;
+  font-size: 24rpx;
+}
+.active image{
+  width:inherit; height: inherit;
+}
+.active .btn-forward{
+  width:320rpx; height: 88rpx;
+  background-color: transparent;
+  position: absolute;
+  top:356rpx;left:210rpx;
+  text-align: center;
+  padding:0;
+  border:solid 0 transparent;
+  border-radius: 44rpx;
+}
+.active .btn-forward image{
+  width:320rpx; height: 88rpx;
+}
+
+.attentionOk{
+  width:750rpx; height: 254rpx;
+  position: relative
+}
+.attentionOk image{
+  width:inherit; height: inherit;
+}
+.attentionOk .title{
+  position: absolute;
+  width:750rpx;
+  text-align: center;
+  font-size: 26rpx;
+  top:30rpx
+}
+.attentionOk .tx{
+  width:690rpx; height: 156rpx;
+  position: absolute;
+  left:32rpx; top:70rpx;
+  box-sizing: border-box;
+  padding:10rpx 30rpx 0 30rpx;
+}
+.attentionOk .tx .userItem{
+  float:left;
+  width:94rpx; height: 94rpx;
+  margin-right: 20rpx;
+}
+.attentionOk .tx .userItem image{
+  width:94rpx; height: 94rpx;
+  border-radius: 50%;
+  border:solid 1px #ccc;
+}
+.attentionOk .tx .userItem .nc{
+  font-size: 24rpx;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prize{
+  width:750rpx; height: 297rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+.prize .bg{
+  width:inherit; height: inherit
+}
+.prize .item{
+  width:646rpx; height: 232rpx;
+  position: absolute;
+  left:51rpx; top:35rpx;
+  box-sizing: border-box;
+  padding:20rpx 0 0 20rpx;
+}
+.prize .item .prizeItem{
+  width:190rpx; height: 195rpx;
+  margin-right: 18rpx;
+
+}
+.prize image:nth-last-of-type(1){
+  margin-right:0
+}
+
+
+.explain{
+  width:750rpx; height: 450rpx;
+  font-size: 26rpx;
+  text-align: justify;
+  position: relative;
+}
+.explain image{
+  width:inherit; height: inherit
+}
+.explain .wb{
+  width:690rpx; height: 290rpx;
+  position: absolute;
+  left:30rpx; top:100rpx;
+  box-sizing: border-box;
+  padding:0 20rpx;
+}
+.explain .wb view{
+  margin-bottom: 26rpx;
+  line-height: 40rpx;
+}
+
+.mask{
+  width:100%; height: 100%;
+  position: absolute;
+  left:0; top:0;
+  background-color: rgba(0,0,0,0.5);
+}
+.mask .maskContent{
+  width:650rpx; height: 856rpx;
+  position: absolute;
+  left:0; right:0; margin:auto;
+  top:189rpx;
+}
+.mask .maskContent image{
+  width:inherit; height: inherit;
+}
+.mask .maskContent .ts{
+  position: absolute;
+  width:100%;
+  top:336rpx; left:0;
+  text-align: center;
+  font-size: 24rpx;
+}
+.mask .maskContent form{
+  width:590rpx;
+  position: absolute;
+  top:465rpx; left:0;
+  font-size: 30rpx;
+  margin-left: 30rpx;
+}
+.mask .maskContent .btn{
+  position: absolute;
+  width:300rpx; height: 88rpx;
+  top:260rpx; left:140rpx;
+  padding:0;
+  border-radius: 10rpx;
+}
+.mask .maskContent .btn image{
+  width:inherit; height: inherit;
+}
+.section{
+  display: flex;
+  height: 74rpx;
+  border-bottom: solid 1px #eee;
+  box-sizing: border-box;
+  padding:14rpx;
+}
+.section text{
+  width:140rpx;
+  font-size: 30rpx;
+  box-sizing: border-box;
+  padding-top: 5rpx;
+}
+.section input{
+  display: inline-block;
+  font-size: 30rpx;
+  width:480rpx;
+}
+.section input::placeholder{
+  color:#bbb;
+}

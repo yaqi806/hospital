@@ -1,0 +1,146 @@
+/* pages/mine/upload/upload.wxss */
+page{
+  background-color: #f9f9f9;
+}
+.photo-select,
+.photo-info{
+  width:690rpx;
+  margin:0 auto;
+}
+.remove-icon{
+  background-color: rgba(0,0,0,0.8);
+  color:#fff;
+  border-radius: 50%;
+}
+.title{
+  font-size: 36rpx;
+  margin-bottom: 20rpx;
+}
+.title image{
+  width:6rpx; height: 36rpx;
+  margin-right: 24rpx;
+  vertical-align: middle;
+}
+.content{
+  width:100%;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding:24rpx;
+  padding-bottom: 0;
+  box-shadow: 0 0 5rpx #aaa;
+  margin-bottom: 23rpx;
+}
+.photo-select .content{
+  display: flex;
+  flex-wrap: wrap;
+}
+.img-box{
+  width:145rpx; height: 145rpx;
+  position: relative;
+  margin-right: 18rpx;
+  margin-bottom: 18rpx;
+}
+.img-box:nth-child(4n){
+  margin-right: 0;
+}
+.img-box image{
+  width:inherit; height: inherit;
+}
+.img-box icon{
+  position: absolute;
+  right:0; top:0;
+  color:#fff;
+}
+.photo-plus{
+  width:145rpx; height: 145rpx;
+  text-align: center;
+  border:dashed 1px #5bc1d0;
+  color:#d5d5d5;
+  box-sizing: border-box;
+  padding-top: 30rpx;
+  margin-bottom: 18rpx;
+}
+.photo-plus .plus{
+  font-size: 34rpx;
+}
+.photo-plus .ts{
+  font-size: 28rpx;
+}
+
+.control{
+  width:100%; height: 100rpx;
+  display: flex;
+  position: absolute;
+  bottom:0;
+}
+.control .cancel,
+.control .submit{
+  width:50%; height: inherit;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  border-radius: 0;
+}
+.control .submit{
+  background-color: #5ac0ce;
+  color:#fff;
+}
+
+.section{
+  height: 74rpx;
+  display: flex;
+  border-bottom:solid 1px #eee;
+  font-size: 30rpx;
+  padding-top: 22rpx;
+}
+.section text{
+  margin-right: 44rpx;
+  box-sizing: border-box;
+  padding-top: 4rpx;
+}
+.section:nth-child(3){
+  border-bottom: none;
+}
+
+@keyframes deleting{
+  0%{
+    transform:scale(1);
+  }
+  100%{
+    transform:scale(0);
+  }
+}
+.deleting{
+  animation:deleting 0.5s ease;
+  animation-fill-mode: forwards;
+}
+
+/* 遮罩层 */
+.mask{
+  position: absolute;
+  top:0; left:0;
+  width:100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 5000;
+}
+.mask .ts{
+  width:90%; height: 300rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin:0 auto;
+  text-align: center;
+  box-sizing: border-box;
+  padding:50rpx;
+  position: relative;
+  top:300rpx;
+  font-size: 40rpx;
+}
+.mask .ts .btn{
+  width:50%; height: 80rpx;
+  background-color: #5ac0ce;
+  margin:50rpx auto 0;
+  line-height: 80rpx;
+  color:#fff;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+}

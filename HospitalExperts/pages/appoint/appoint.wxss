@@ -1,0 +1,82 @@
+/* pages/appoint/appoint.wxss */
+page{
+  background-color: #f6f6f6;
+  padding-top: 30rpx;
+}
+
+.appoint-item{
+  width:690rpx; height: 292rpx;
+  background-color: #fff;
+  margin:0 auto 30rpx;
+  box-shadow: 0 0 5px  #ddd;
+  border-radius: 5rpx;
+  padding:20rpx;
+  box-sizing: border-box;
+}
+.appoint-item .appoint-item-top{
+  height: 190rpx;
+  border-bottom:solid 1px #ddd;
+  display: flex;
+}
+.appoint-item .appoint-item-top image{
+  width:170rpx; height: 170rpx;
+  border-radius: 50%;
+}
+.appoint-item .appoint-item-top .content{
+  margin-left: 20rpx;
+}
+.appoint-item .appoint-item-top .content .one{
+  color:#5ac0ce;
+  font-weight: bold;
+  font-size: 34rpx;
+  margin-bottom: 10rpx;
+}
+.appoint-item .appoint-item-top .content .two{
+  color:#414141;
+  font-size: 24rpx;
+  margin-bottom: 10rpx;
+}
+.appoint-item .appoint-item-top .content .three{
+  color:#5ac0ce;
+  font-size: 24rpx;
+  margin-bottom: 10rpx;
+}
+.appoint-item .appoint-item-top .content .four{
+  width:450rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color:#414141;
+  font-size: 24rpx;
+}
+.appoint-item .appoint-item-bottom{
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.appoint-item .appoint-item-bottom .ts{
+  height: inherit;
+  font-size: 26rpx;
+  color:#666;
+}
+.appoint-item .appoint-item-bottom .ts swiper{
+  height: 80rpx;
+}
+.appoint-item .appoint-item-bottom .ts swiper swiper-item{
+  width:600rpx;
+  height: 80rpx !important;
+}
+.appoint-item .appoint-item-bottom .ts swiper swiper-item .swiperItem{
+  width:inherit;
+  height: 80rpx;
+}
+.appoint-item .appoint-item-bottom .btn{
+  width:90rpx; height: 40rpx;
+  background-color: #5ac0ce;
+  color: #fff;
+  border-radius: 20rpx;
+  font-size: 26rpx;
+  text-align: center;
+  line-height: 40rpx;
+}

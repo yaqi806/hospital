@@ -1,0 +1,53 @@
+<!--pages/mine/mine.wxml-->
+<view class="mine-adv">
+  <image src="../../images/mine-adv.jpg"></image>
+</view>
+
+<view class="mine-info">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="userAuthorize"> 用户授权 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <view class="userinfo-nickname"><text>{{userInfo.nickName}}</text></view>
+      <view class="userinfo-sex">
+        <view wx:if="{{userInfo.gender==1}}">♂ 男</view>
+        <view wx:else>♀ 女</view>
+        <view>{{userInfo.ages}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class="user-myphoto-myappoint">
+    <view class="myphoto">
+      <view class="title">我的照片</view>
+      <view class="num" wx:if="{{hasUserInfo && canIUse}}">{{myPhotoNum}}</view>
+      <view class="num" wx:else>0</view>
+    </view>
+    <view class="myappoint" catchtap='myAppoint'>
+      <view class="title">我的预约</view>
+      <view class="num" wx:if="{{hasUserInfo && canIUse}}">{{myAppointNum}}</view>
+      <view class="num" wx:else>0</view>
+    </view>
+  </view>
+</view>
+
+<view class="mine-btn" catchtap='uploadPhoto'>
+  <image src="../../images/mine-btn.jpg"></image> 上传照片
+</view>
+
+<view class="myPhotos" wx:if="{{hasUserInfo && canIUse}}">
+  <block wx:for="{{myPhotos}}" wx:for-item="item" wx:key="idx">
+    <view class="dt"> {{item.date}} （{{item.num}}张）</view>
+    <block wx:for="{{item.photos}}" wx:for-item="ite" wx:for-index="index" wx:key="index">
+      <image src="{{url}}{{ite.photoURL}}" catchtap='showDetail' data-photo-id="{{ite.phid}}"></image>
+    </block>
+    <view class="spx"></view>
+  </block>
+</view>
+
+<view class="mask" wx:if="{{maskShow}}">
+  <view class="ts">
+    <text>您尚未授权登录，不能上传照片</text>
+    <view class="btn" catchtap='closeMask'>确定</view>
+  </view>
+</view>

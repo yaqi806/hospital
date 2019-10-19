@@ -1,0 +1,10 @@
+<!--pages/index/project-detail/project-detail.wxml-->
+<!-- <scroll-view scroll-y style="height:1206rpx;" enable-back-to-top="true" scroll-into-view="#tp1">
+  <block wx:for="{{projectDetail}}" wx:for-item="item" wx:for-index="index" wx:key="idx">
+    <view id="#tp{{index}}">
+      <image src="{{url}}{{item.bdpic}}" class="tp" bindtap="previewImage"></image>
+    </view>  
+  </block>
+</scroll-view> -->
+
+<web-view src="{{url}}"></web-view>

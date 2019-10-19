@@ -1,0 +1,83 @@
+/* pages/mine/my-appoint/my-appoint.wxss */
+page{
+  background-color: #f9f9f9;
+}
+
+.title{
+  font-size: 30rpx;
+  width:690rpx;
+  margin:34rpx auto;
+}
+
+.appoint{
+  width:690rpx; 
+  margin:0 auto 30rpx;
+  background-color: #fff;
+  box-shadow: 0 0 15rpx #ccc;
+  box-sizing: border-box;
+  padding:20rpx;
+  position: relative;
+}
+.appoint .one{
+  display: flex;
+  border-bottom: solid 1px #ddd;
+}
+
+.appoint .one .hospitalImage{
+  width:187rpx; height: 100rpx;
+  border-radius: 10rpx;
+}
+.appoint .one .info{
+  font-size: 30rpx;
+  margin-left: 28rpx;
+}
+
+.appoint .two{
+  height: 66rpx;
+  line-height: 66rpx;
+  font-size: 30rpx;
+  border-bottom: solid 1px #ddd;
+}
+.appoint .two image{
+  width:28rpx; height: 28rpx;
+  margin-right: 10rpx;
+}
+.appoint .two .bt{
+  color:#898989
+}
+.appoint .two .nr{
+  color:#333;
+}
+
+.appoint .two:nth-last-of-type(2){
+  border-bottom: none;
+}
+
+.opa{
+  width:100%; height: 68rpx;
+  background-color: red;
+  display: flex;
+  color:#fff;
+}
+.opa .btn01,
+.opa .btn02{
+  width:50%; height: inherit;
+  text-align: center;
+  line-height: 68rpx;
+  font-size: 30rpx;
+}
+.opa .btn01{
+  background-color: #5ac0ce;
+}
+.opa .btn02{
+  background-color: #f8aa2e;
+}
+
+.status{
+  width:36rpx; height: 81rpx;
+  position: absolute;
+  right:20rpx; top:0;
+}
+.status image{
+  width:inherit ;height: inherit;
+}

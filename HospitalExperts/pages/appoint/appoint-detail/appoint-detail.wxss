@@ -1,0 +1,169 @@
+/* pages/appoint/appoint-detail/appoint-detail.wxss */
+.adv{
+  width:100%; height: 199rpx;
+}
+.adv image{
+  width:inherit; height: inherit;
+}
+
+.back{
+  width:690rpx; height: 404rpx;
+  margin:0 auto;
+  box-shadow: 0 0 5px #aaa;
+  position: relative;
+  top:-90rpx;
+  border-radius: 10rpx;
+}
+.back image{
+  width:inherit; height: inherit;
+  border-radius: 10rpx;
+}
+.back .tx{
+  width:150rpx; height: 150rpx;
+  border-radius: 50%;
+  position: absolute;
+  top:-75rpx; left:50%; margin-left: -75rpx;
+}
+.back .content{
+  width:100%; 
+  position: absolute;
+  left:0; top:95rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.back .content .one{
+  margin-bottom: 20rpx;
+}
+.back .content .two{
+  height: 35rpx;
+  border:solid 1px #f9a92c;
+  font-size: 24rpx;
+  color:#f9a92c;
+  text-align: center;
+  line-height: 35rpx;
+  border-radius: 17.5rpx;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+  padding:0 20rpx;
+}
+.back .content .three{
+  width:600rpx; 
+  font-size: 24rpx;
+  text-align: center;
+  color:#999;
+  margin-bottom: 20rpx;
+}
+.back .content .three .attend{
+  color:#333;
+}
+.back .content .four{
+  display: flex;
+}
+.back .content .four .score,
+.back .content .four .reserve{
+  
+  width:220rpx; height: 50rpx;
+  background-color: #f6fbfc;
+  border:solid 1px #bfe4e9;
+  font-size: 24rpx;
+  color:#5ac0ce;
+  border-radius: 25rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+.back .content .four .score{
+  margin-right: 13rpx;
+}
+
+/* 出诊时间 */
+.outcalls{
+  width:690rpx; height: 600rpx;
+  margin: 0 auto;
+  position: relative;
+  top:-60rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 0 5px #ccc;
+  box-sizing: border-box;
+  padding:0 20rpx;
+}
+
+.outcalls .outcalls-title{
+  width:100%; height: 72rpx;
+  line-height: 72rpx;
+  font-size: 30rpx;
+  border-bottom: solid 1px #ddd;
+}
+.outcalls .outcalls-title image{
+  width:34rpx; height: 34rpx;
+  vertical-align: middle;
+}
+.outcalls .outcalls-title .kh{
+  font-size: 26rpx;
+  color:#f9a92c;
+}
+
+.outcalls-item{
+  box-sizing: border-box;
+  padding:20rpx;
+}
+.hname{
+  height:60rpx;
+  line-height: 60rpx;
+  font-weight: bold;
+  border-bottom: solid 1px #ddd;
+}
+.items{
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: dashed 1px #ddd;
+  display: flex;
+  justify-content: space-between;
+}
+
+.appoint-mask{
+  width:100%; height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  position: absolute;
+  left:0; top:0;
+}
+.appoint-mask .appoint-alert{
+  width:650rpx; height: 700rpx;
+  background-color: #fff;
+  position: absolute;
+  left:0;right:0;top:0;bottom:0;
+  margin: auto;
+  border-radius:10rpx;
+  overflow: hidden;
+}
+.appoint-mask .appoint-alert .wb{
+  box-sizing: border-box;
+  padding:30rpx;
+}
+.appoint-mask .appoint-alert .title{
+  text-align: center;
+  font-size: 30rpx;
+  margin-bottom: 40rpx;
+}
+.appoint-mask .appoint-alert .dl{
+  font-size: 24rpx;
+  margin-bottom: 30rpx;
+}
+.appoint-mask .appoint-alert .control{
+  width:100%; height: 87rpx;
+  background-color: #f6f6f6;
+  position: absolute;
+  bottom:0;
+  display: flex;
+  border-top: solid 1px #ccc;
+  font-size: 30rpx;
+}
+.appoint-mask .appoint-alert .control view{
+  width:50%; height: 87rpx;
+  text-align: center;
+  line-height: 87rpx;
+}
+.appoint-mask .appoint-alert .control .ok{
+  color:#5ac0ce;
+  border-left: solid 1px #ccc;
+}

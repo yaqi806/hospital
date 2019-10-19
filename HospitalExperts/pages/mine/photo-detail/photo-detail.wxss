@@ -1,0 +1,88 @@
+/* pages/mine/photo-detail/photo-detail.wxss */
+.pic{
+  width:100%; height:auto;
+  margin:20rpx auto 20rpx;
+  vertical-align: top;
+}
+.pic swiper{
+  height:1600rpx;
+}
+.pic swiper-item image{
+  width:100%; height:100%;
+}
+
+.picInfo{
+  width:90%; height:auto;
+  margin:20rpx auto 0;
+  font-size: 30rpx;
+  color:#323232;
+  overflow: hidden;
+  border-bottom: solid 1px #ccc;
+  padding-bottom: 10rpx;
+  box-sizing: border-box
+}
+.picInfo .single{
+  width:100%;
+  overflow: hidden;
+  margin-bottom: 10rpx;
+}
+.picInfo .single .ts{
+  width: 150rpx;
+  float:left;
+}
+.picInfo .single .nr{
+  width:510rpx;
+  text-align: justify;
+  float:left;
+}
+
+.opa{
+  width:90%;
+  margin:20rpx auto 0;
+  text-align: right;
+}
+.opa .btn{
+  width:44rpx; height: 44rpx;
+  display: inline-block;
+  background-color: transparent;
+  border:none;
+  outline:none;
+  text-align: center;
+  line-height: 44rpx;
+  padding:0;
+  margin-right: 10rpx;
+}
+.opa image{
+  width:44rpx; height: 44rpx;
+  margin-right: 10rpx;
+}
+
+/* 遮罩层 */
+.mask{
+  position: absolute;
+  top:0; left:0;
+  width:100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 5000;
+}
+.mask .ts{
+  width:90%; height: 300rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin:0 auto;
+  text-align: center;
+  box-sizing: border-box;
+  padding:50rpx;
+  position: relative;
+  top:300rpx;
+  font-size: 40rpx;
+}
+.mask .ts .btn{
+  width:50%; height: 80rpx;
+  background-color: #5ac0ce;
+  margin:50rpx auto 0;
+  line-height: 80rpx;
+  color:#fff;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+}

@@ -1,0 +1,82 @@
+<!--pages/appoint/appoint-ok/appoint-ok.wxml-->
+<view class="appoint-info">
+  <view class="title">
+    <image src="../../../images/appointInfo.jpg"></image>
+    <text>预约信息</text>
+  </view>
+  <view class="appoint-content">
+    <view class="first">
+      <image src="{{url}}{{tempData[0].pic}}" class="pic"></image>
+      <text class="exname">{{tempData[0].name}}</text>
+      <text class="degree">{{tempData[0].degree}}</text>
+    </view>
+    <view>
+      <image src="../../../images/hospital.jpg" class="icon"></image>
+      <text class="wb">医院：{{tempData[0].hname}}</text>
+    </view>
+    <view>
+      <image src="../../../images/disc.jpg" class="icon"></image>
+      <text class="wb">科室：{{tempData[0].disc}}</text>
+    </view>
+    <view>
+      <image src="../../../images/outdate.jpg" class="icon"></image>
+      <text class="wb">时间：{{tempData[0].dt}}（周{{tempData[0].wd}}）{{tempData[0].aph}}</text>
+    </view>    
+  </view>
+</view>
+
+<form bindsubmit='formSubmit'>
+<view class="user-info">
+  <view class="title">
+    <image src="../../../images/usersInfo.jpg"></image>
+    <text>用户信息</text>
+  </view>
+  <view class="user-content">
+    <view class="section">
+      <text>姓名</text>
+      <input placeholder='请输入您的姓名（必填）' name="userName"></input>
+    </view>
+    <view class="section">
+      <text>年龄</text>
+      <input placeholder='请输入您的年龄' name="userAge"></input>
+    </view>
+    <view class="section">
+      <text>性别</text>
+      <picker bindchange="bindPickerChange" value="{{sexIndex}}" range="{{sex}}">
+        <view>
+          <text>{{sex[sexIndex]}}</text>
+        </view> 
+      </picker>
+    </view>
+    <view class="section">
+      <text>手机号码</text>
+      <input placeholder='请输入您的手机号码（必填）' name="userPhone"></input>
+    </view>    
+    <view class="section">
+      <text>户籍地</text>
+      <picker bindchange="changeRegin" mode = "region" value="{{region}}">
+        <view class="tui-picker-detail" style="font-size:30rpx">{{region[0]}} - {{region[1]}} - {{region[2]}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class="checkedms">
+    <view><radio checked="true" color="#fba92c" /></view>
+    <text>我已阅读并同意《保密协议》，个人信息引用于{{tempData[0].hname}}预约，我们将确保其安全性。</text>    
+  </view>
+</view>
+
+<button class="appoint-btn" form-type='submit'>提交信息</button>
+</form>
+
+<view class="mask" wx:if="{{isShow}}">
+  <view class="appoint-alert-ok">
+    <view class="mask-close" catchtap='maskClose'>X</view>
+    <view class="tp">
+      <image src="../../../images/appoint-ok.png"></image>
+    </view>
+    <view class="ts">
+      您预约了{{tempData[0].name}}{{tempData[0].degree}}<text class="dt">{{tempData[0].dt}}（周{{tempData[0].wd}}）{{tempData[0].aph}}</text> 门诊号请准时就诊！
+    </view>
+    <view class="mask-btn" catchtap='showExpert' data-expert-id="{{tempData[0].exid}}">查看专家信息</view>
+  </view>
+</view>

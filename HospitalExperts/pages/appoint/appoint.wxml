@@ -1,0 +1,40 @@
+<!--pages/appoint/appoint.wxml-->
+
+<block wx:for="{{tempData}}" wx:for-item="item" wx:key="index">
+  <view class="appoint-item" data-exid="{{item.exid}}" catchtap="toDetail">
+    <view class="appoint-item-top">
+      <image src="{{url}}{{item.pic}}"></image>
+      <view class="content">
+        <view class="one">
+          <text>{{item.name}}</text>
+        </view>
+        <view class="two">
+          <text style="color:#888;">职称：</text>
+          <text>{{item.pos}}</text>
+        </view>
+        <view class="three">
+          <text style="color:#888;">咨询量：</text>
+          <text>{{item.reserve}}</text>
+        </view>
+        <view class="four">
+          <text style="color:#888;">擅长：</text>
+          <text>{{item.goodat}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="appoint-item-bottom">
+      <view class="ts">
+        <swiper autoplay="true" circular='true' vertical='true' style="width:500rpx;height:80rpx;">
+          <block wx:for="{{item.appinfo}}" wx:for-item="username" wx:for-index="index" wx:key="idx">
+              <swiper-item>
+                <view class="swiperItem" style="width:600rpx;height:80rpx;line-height:80rpx">
+                  {{index+1}}分钟前患者 {{username}}** 预约了该专家
+                </view>
+              </swiper-item>
+          </block>
+        </swiper>
+      </view>
+      <view class="btn" data-exid="{{item.exid}}" catchtap="toDetail">预约</view>
+    </view>
+  </view>
+</block>

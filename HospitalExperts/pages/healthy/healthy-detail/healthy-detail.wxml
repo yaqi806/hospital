@@ -1,0 +1,40 @@
+<!--pages/healthy/healthy-detail/healthy-detail.wxml-->
+<view class="title">{{tempData[0].title}}</view>
+<view class="source">
+  <text class="hname">来源：{{tempData[0].hname}}</text>
+  <text class="dt">{{tempData[0].dt}}</text>
+</view>
+
+<view class="content">
+  <rich-text nodes="{{tempData[0].healthycontent}}"></rich-text>
+</view>
+
+<view class="temp-adv" catchtap='toTest'>
+  <image src="../../../images/tempAdv.jpg"></image>
+</view>
+
+<view class="forward">
+  转发至：
+  <!-- <button class="qq"><image src="../../../images/qq.jpg"></image> QQ空间</button> -->
+  <button class="friend" open-type='share'><image src="../../../images/friend.jpg"></image> 微信好友</button>
+  <!-- <button class="quan"><image src="../../../images/quan.jpg"></image> 微信朋友圈</button> -->
+</view>
+
+<view class="about">
+  <view class="title">
+    <view class="xgzx">相关资讯</view>
+  </view>
+  <view class="content">
+    <block wx:for="{{aboutData}}" wx:key="index">
+      <view class="item" data-healthy-id="{{item.heid}}" catchtap='toHealthyDetail'>{{item.title}}</view>
+    </block>
+  </view>
+</view>
+
+<view class="adv">
+  <image src="../../../images/adv.png"></image>
+</view>
+
+<view class="ewm">
+  <image src="../../../images/ewm.jpg"></image>
+</view>

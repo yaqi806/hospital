@@ -1,0 +1,153 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.4",
+	"appid": "wx7d118a6b1b628f42",
+	"projectname": "HospitalExperts",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 11,
+			"list": [
+				{
+					"id": -1,
+					"name": "test",
+					"pathName": "pages/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "疾病预约",
+					"pathName": "pages/appoint/appoint",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "预约详情",
+					"pathName": "pages/appoint/appoint-detail/appoint-detail",
+					"query": "bh=2",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "健康",
+					"pathName": "pages/healthy/healthy",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "预约开始",
+					"pathName": "pages/appoint/appoint-ok/appoint-ok",
+					"query": "bh=4",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "专家信息",
+					"pathName": "pages/appoint/expert-detail/expert-detail",
+					"query": "bh=1",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "预约成功",
+					"pathName": "pages/appoint/appoint-ok/appoint-ok",
+					"query": "bh=6",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "健康资讯详情",
+					"pathName": "pages/healthy/healthy-detail/healthy-detail",
+					"query": "heid=3",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "上传照片",
+					"pathName": "pages/mine/upload/upload",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "领奖活动",
+					"pathName": "pages/index/active/active",
+					"query": "",
+					"scene": 1011
+				},
+				{
+					"id": 11,
+					"name": "自测项目题目",
+					"pathName": "pages/test/testTopic/testTopic",
+					"query": "tid=1",
+					"scene": null
+				},
+				{
+					"id": 12,
+					"name": "照片详情",
+					"pathName": "pages/mine/photo-detail/photo-detail",
+					"query": "phid=75",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的预约",
+					"pathName": "pages/mine/my-appoint/my-appoint",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "专题详情",
+					"pathName": "pages/index/project-detail/project-detail",
+					"query": "proid=1",
+					"scene": null
+				}
+			]
+		}
+	}
+}

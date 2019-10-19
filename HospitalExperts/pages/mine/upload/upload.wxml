@@ -1,0 +1,54 @@
+<!--pages/mine/upload/upload.wxml-->
+<form bindsubmit='formSubmit'>
+  <view class="photo-select">
+    <view class="title">
+      <image src="../../../images/icon.jpg"></image>
+      照片选择
+    </view>
+    <view class="content">
+      <block wx:for="{{chooseFile}}" wx:for-index="idx" wx:key="idxs">
+        <view class="img-box {{deleteIndex===idx?'deleting':''}}">
+          <image src="{{item}}"></image>
+          <icon class="remove-icon" type="cancel" size="20" color="#fff" data-img-id="{{idx}}" catchtap='deleteImage'></icon>
+        </view>
+      </block>
+      <view class="photo-plus" catchtap='plusPhoto'>
+        <view class="plus">+</view>
+        <view class="ts">添加照片</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="photo-info">
+    <view class="title">
+      <image src="../../../images/icon.jpg"></image>
+      照片信息
+    </view>
+    <view class="content">
+      <view class="section">
+        <text>检查报告</text>
+        <input placeholder='请输入检查报告名称' name='reports'></input>
+      </view>
+      <view class="section">
+        <text>诊断描述</text>
+        <input placeholder='请输入疾病诊断描述' name='descriptions'></input>
+      </view>
+      <view class="section">
+        <text>备注信息</text>
+        <input placeholder='请输入备注信息' name='others'></input>
+      </view>
+    </view>
+  </view>
+
+  <view class="control">
+    <button class="cancel" catchtap='cancelUpload'>取消</button>
+    <button class="submit" form-type='submit'>确定上传</button>
+  </view>
+</form>
+
+<view class="mask" wx:if="{{maskShow}}">
+  <view class="ts">
+    <text>照片上传成功!</text>
+    <view class="btn" catchtap='goBack'>返回</view>
+  </view>
+</view>

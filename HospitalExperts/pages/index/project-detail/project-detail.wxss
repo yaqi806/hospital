@@ -1,0 +1,5 @@
+/* pages/index/project-detail/project-detail.wxss */
+.tp{
+  display:block;
+  width:750rpx; height: 1206rpx;
+}

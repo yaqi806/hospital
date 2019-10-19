@@ -1,0 +1,186 @@
+/* pages/appoint/appoint-ok/appoint-ok.wxss */
+page{
+  background-color: #f6f6f6;
+}
+.appoint-info{
+  width:100%; height:372rpx;
+  box-sizing: border-box;
+  padding:28rpx;
+}
+.appoint-info .title,
+.user-info .title{
+  margin-bottom: 18rpx;
+}
+.appoint-info .title image,
+.user-info .title image{
+  width:32rpx; height: 32rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+.appoint-info .title text,
+.user-info .title text{
+  font-size: 32rpx;
+  vertical-align: middle;
+}
+
+.appoint-info .appoint-content{
+  width:100%; height: 294rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 0 5rpx #ccc;
+  box-sizing: border-box;
+  padding:28rpx;
+}
+.appoint-content .first{
+  border-bottom: solid 1px #dddddd;
+  padding-bottom: 18rpx;
+  box-sizing: border-box;
+}
+.appoint-content .pic{
+  width:70rpx; height: 70rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 18rpx;
+}
+.appoint-content .exname{
+  color:#333333;
+  font-size: 28rpx;
+  vertical-align: middle;
+  margin-right: 18rpx;
+}
+.appoint-content .degree{
+  color:#888888;
+  font-size: 28rpx;
+  vertical-align: middle;
+}
+.user-info .user-content{
+  width:100%; height: 400rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 0 5rpx #ccc;
+  box-sizing: border-box;
+  padding:28rpx;
+}
+
+.user-info{
+  width:100%; height: 687rpx;
+  box-sizing: border-box;
+  padding:28rpx;
+}
+
+.icon{
+  width:24rpx; height: 24rpx;
+  vertical-align: middle;
+  margin-right: 10rpx;
+}
+.wb{
+  font-size: 28rpx;
+  color: #333;
+}
+.section{
+  display: flex;
+  height: 74rpx;
+  border-bottom: solid 1px #eee;
+  box-sizing: border-box;
+  padding:14rpx;
+}
+.section:nth-child(5){
+  border-bottom: none;
+}
+.section text{
+  width:140rpx;
+  font-size: 30rpx;
+  box-sizing: border-box;
+  padding-top: 5rpx;
+}
+.section input{
+  display: inline-block;
+  font-size: 30rpx;
+  width:480rpx;
+}
+.section input::placeholder{
+  color:#bbb;
+}
+.section radio-group{
+  font-size: 30rpx;
+}
+.section radio{
+  transform:scale(0.7);
+}
+
+.checkedms{
+  font-size: 26rpx;
+  color:#666;
+  margin-top: 32rpx;
+  display: flex;
+}
+
+.appoint-btn{
+  width:100%; height: 87rpx;
+  background-color: #5ac0ce;
+  color:#fff;
+  text-align: center;
+  line-height: 87rpx;
+  position: absolute;
+  bottom:0;
+  font-size: 30rpx;
+}
+
+.mask{
+  width:100%; height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  position: absolute;
+  left:0; top:0;
+  z-index: 1000;
+}
+.mask .appoint-alert-ok{
+  width:647rpx; height: 455rpx;
+  background-color: #fff;
+  position: absolute;
+  left:0; right:0;
+  margin:300rpx auto 0;
+  border-radius: 10rpx;
+}
+.mask .appoint-alert-ok .tp{
+  width:318rpx; height: 318rpx;
+  position: absolute;
+  left:0; right:0;
+  margin:auto;
+  top:-176rpx;
+}
+.mask .appoint-alert-ok .tp image{
+  width:inherit; height: inherit;
+}
+.mask .appoint-alert-ok .ts{
+  width:90%;
+  margin:180rpx auto 0;
+  font-size: 26rpx;
+  color:#333;
+  text-align: center;
+  line-height: 50rpx;
+}
+.mask .appoint-alert-ok .ts .dt{
+  color:#68c4d1
+}
+.mask .appoint-alert-ok .mask-btn{
+  width:386rpx; height: 83rpx;
+  background-color: #5ac0ce;
+  color:#fff;
+  text-align: center;
+  line-height: 83rpx;
+  border-radius: 42rpx;
+  margin:45rpx auto 0;
+}
+
+.mask .mask-close{
+  width:36rpx; height: 36rpx;
+  border-radius: 50%;
+  border:solid 1px #fff;
+  color:#fff;
+  text-align: center;
+  line-height: 36rpx;
+  position: absolute;
+  right:0; top:-56rpx;
+  font-size: 26rpx;
+  font-family: Arial;
+}

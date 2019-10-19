@@ -1,0 +1,73 @@
+<!--pages/index/active/active.wxml-->
+
+<view class="active">
+  <view class="num">{{setNum}}</view>  
+  <image src="../../../images/active.png"></image>
+   <button class="btn-forward"  open-type="{{contact}}" bindcontact="handleContact"  bindgetuserinfo="getUserInfo">
+    <image src="{{ziti}}"></image>
+   </button>
+</view>
+
+<view class="attentionOk" wx:if="{{isAttention==false}}">
+  <image src="../../../images/attentionOk.png"></image>
+  <view class="title"> 已通过你转发专题关注的好友({{attentionUser.length}}个)</view> 
+  <scroll-view class="tx" scroll-x>
+    <block wx:for="{{attentionUser}}" wx:for-item="item">
+      <view class="userItem">
+        <image src="{{item.headimgurl}}"></image>
+        <view class="nc">{{item.nickname}}</view>
+      </view>
+    </block>
+  </scroll-view>
+</view> 
+
+<view class="prize">
+  <image src="../../../images/prize.png" class="bg"></image>
+  <view class="item">
+  <block wx:for="{{prize}}" wx:for-item="item" wx:key="idx">
+    <image src="{{url}}{{item.pic}}" class="prizeItem"></image>
+  </block>
+  </view>
+</view> 
+
+<view class="explain">
+  <image src="../../../images/explain.png"></image>
+  <view class="wb">
+    <view>1、点击转发专题，<text style="color:#ef5e2f">获得{{setNum}}名粉丝关注公众号，即可获得随机礼品一份</text>；</view>
+    <view>2、粉丝达到规定人数，请留下您的电话及地址，我们将免费邮寄给您；</view>
+    <view>3、活动解释权归网站所有，如有疑问请拨打：******</view> 
+  </view>
+</view>
+
+<view class="mask" wx:if="{{attentionUser.length>=setNum}}">
+  <view class="maskContent">
+    <image src="../../../images/bd.png"></image>
+    <view class="ts">
+      <view style="color:#333;margin-bottom:10rpx;">恭喜您，已有{{setNum}}位好友通过您转发的专题进行关注！</view>
+      <view style="color:#666;">（请填写您的信息，礼品将免费邮寄到您的地址）</view>
+    </view>
+    <form bindsubmit='formSubmit'>
+      <view class="user-info">
+        <view class="user-content">
+          <view class="section">
+            <text>姓名</text>
+            <input placeholder='请输入您的姓名' name="userName"></input>
+          </view>   
+          <view class="section">
+            <text>电话</text>
+            <input placeholder='请输入您的手机号码' name="userPhone"></input>
+          </view>
+          <view class="section">
+            <text>地址</text>
+            <input placeholder='请输入您的地址' name="userHome"></input>
+          </view>
+        </view>
+      </view>
+
+      <button class="btn" form-type='submit'>
+        <image src="../../../images/bdbtn.png"></image>
+      </button>     
+      
+    </form>
+  </view>  
+</view>

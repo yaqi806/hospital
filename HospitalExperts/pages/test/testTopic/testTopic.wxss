@@ -1,0 +1,222 @@
+/* pages/test/testTopic/testTopic.wxss */
+page{
+  background-color: #eef7fc;
+}
+.test-banner{
+  width:750rpx; height: 254rpx;
+  margin-bottom: 25rpx;
+}
+.test-banner image{
+  width:inherit; height: inherit;
+}
+
+.test-num{
+  text-align: center;
+  font-size: 30rpx;
+  margin-bottom: 35rpx;
+}
+.title .current-num{
+  color:#5ac0ce;
+}
+
+.topic-item{
+  width:690rpx;
+  margin:0 auto;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding:20rpx;
+}
+
+.topic-item .title{
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+.topic-item .symptom-item{
+  width:auto; height: 60rpx;
+  box-sizing: border-box;
+  padding: 0 24rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 32rpx;
+  display: inline-block;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+
+.topic-item .status-item{
+  width:100%; height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+
+.topic-item .status{
+  margin-bottom:100rpx;
+}
+.topic-item .btn{
+  width:100%; height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  margin-bottom: 20rpx;
+  background-color: #5ac0ce;
+  color:#fff;
+  font-size: 32rpx;
+}
+
+.btn01{
+  background-color: #eee;
+  color: #333;
+}
+.btn02{
+  background-color: #5ac0ce;
+  color: #fff;
+}
+
+/* 遮罩层 */
+.mask-ok{
+  width:100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  left:0; top:0
+}
+.mask-ok .content{
+  width:650rpx; height: 656rpx;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 10rpx;
+  left:0; right:0;
+  margin:260rpx auto 0;
+  overflow:hidden;
+}
+.mask-ok .content image{
+  width:inherit; height: inherit;
+}
+.mask-ok .content .close{
+  width:40rpx; height: 40rpx;
+  background-color: #30c296;
+  text-align: center;
+  line-height: 40rpx;
+  color:#fff;
+  position: absolute;
+  top:10rpx; right:10rpx;
+  border-radius: 50%;
+  font-size: 20rpx;
+}
+.mask-ok .content .ts1,
+.mask-ok .content .ts2{
+  position: absolute;
+}
+.mask-ok .content .ts1{
+  width:350rpx;
+  top:224rpx; right:40rpx;
+  font-size: 30rpx;
+  text-align: justify
+}
+.mask-ok .content .ts1 text{
+  color:#23b086;
+  font-size: 35rpx;
+}
+
+.mask-ok .content .ts2{
+  width:570rpx;
+  left:40rpx; top:400rpx;
+  font-size: 30rpx;
+  text-align: justify;
+}
+.mask-ok .content .ts2 text{
+  color:#23b086;
+}
+
+.mask-ok .content .btnA,
+.mask-ok .content .btnB{
+  width:270rpx; height: 88rpx;
+  text-align: center;
+  line-height: 88rpx;
+  position: absolute;
+  border-radius: 10rpx;
+  color:#fff;
+  bottom: 40rpx;
+}
+.mask-ok .content .btnA{
+  left:40rpx;
+  background-color: #f9aa2d;
+}
+.mask-ok .content .btnB{
+  right:40rpx;
+  background-color: #23b086;
+}
+
+.mask-no{
+  width:100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: absolute;
+  left:0; top:0
+}
+.mask-no .content{
+  width:650rpx; height: 656rpx;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 10rpx;
+  left:0; right:0;
+  margin:260rpx auto 0;
+  overflow:hidden;
+}
+.mask-no .content image{
+  width:inherit; height: inherit;
+}
+.mask-no .content .close{
+  width:40rpx; height: 40rpx;
+  background-color: #eb141c;
+  text-align: center;
+  line-height: 40rpx;
+  color:#fff;
+  position: absolute;
+  top:10rpx; right:10rpx;
+  border-radius: 50%;
+  font-size: 20rpx;
+}
+.mask-no .content .ts1,
+.mask-no .content .ts2{
+  position: absolute;
+}
+.mask-no .content .ts1{
+  width:350rpx;
+  top:224rpx; right:40rpx;
+  font-size: 30rpx;
+  text-align: justify
+}
+.mask-no .content .ts1 text{
+  color:#dd0009;
+  font-size: 35rpx;
+}
+
+.mask-no .content .ts2{
+  width:570rpx;
+  left:40rpx; top:400rpx;
+  font-size: 30rpx;
+  text-align: justify;
+}
+.mask-no .content .ts2 text{
+  color:#dd0009;
+}
+
+.mask-no .content .btnA,
+.mask-no .content .btnB{
+  width:270rpx; height: 88rpx;
+  text-align: center;
+  line-height: 88rpx;
+  position: absolute;
+  border-radius: 10rpx;
+  color:#fff;
+  bottom: 40rpx;
+}
+.mask-no .content .btnA{
+  left:40rpx;
+  background-color: #f9aa2d;
+}
+.mask-no .content .btnB{
+  right:40rpx;
+  background-color: #dd0009;
+}

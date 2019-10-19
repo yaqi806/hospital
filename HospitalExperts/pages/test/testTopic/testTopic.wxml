@@ -1,0 +1,60 @@
+<!--pages/test/testTopic/testTopic.wxml-->
+<view class="test-banner">
+  <image src="{{url}}{{testData[0].banner}}"></image>
+</view>
+ 
+<view class="test-num">
+   <!-- <text class="current-num">{{currentNum}}</text>/{{testData[0].numTotal}} -->
+</view>
+
+<block wx:for="{{topicData}}" wx:for-item="item" wx:for-index="ind" wx:key="ind">
+  <view class="topic-item" wx:if="{{currentNum==(ind+1)}}">
+    <view class="test-num">
+      <text class="currrent-num">{{currentNum}}</text>/{{testData[0].numTotal}}
+    </view>
+    <view class="title">
+      <text class="title">{{item.title}}</text> 
+    </view>
+    <view class="symptom">
+      <block wx:for="{{item.symptom}}" wx:for-item="sym" wx:for-index="i" wx:key="i">
+        <view catchtap='check' class="symptom-item {{!sym.checked?'btn01':'btn02'}}" data-topic-id="{{ind}}" data-sym-id="{{i}}">{{sym.name}}</view>
+      </block>
+    </view>
+    <view class="title">
+      <text class="title">请选择你目前存在的状态（单选）</text>
+    </view>
+    <view class="status">
+      <block wx:for="{{item.answer}}" wx:for-item="ans" wx:for-index="a" wx:key="a">
+        <view class="status-item {{multipleSelect?'btn01':(statusNum==a?'btn02':'btn01')}}" catchtap='statusSelect' data-sta-id="{{a}}" data-sta-istotal="{{ans.istotal}}">{{ans.tatitle}}</view>
+      </block>      
+    </view>
+
+    <view class="btn" catchtap='nextTopic' wx:if="{{currentNum!=testData[0].numTotal}}">下一症状</view>
+    <view class="btn" catchtap='topicResult' wx:if="{{currentNum==testData[0].numTotal}}">完成</view>
+  </view> 
+</block>
+
+<view class="mask-ok" wx:if="{{mask && total<testData[0].gte}}">
+  <view class="content">
+    <image src="../../../images/test-ok.jpg"></image>
+    <view class="close" catchtap='closePage'>X</view>
+    <view class="ts1">您有 <text>{{total}}</text> 项符合{{testData[0].conditions}}的条件，继续保持。</view>
+    <view class="ts2"><text>温馨提示：</text>{{testData[0].ltts}}</view>
+    <button class="btnA" open-type='share'>分享</button>
+    <view class="btnB" catchtap='reTest'>重新测试</view>
+  </view>
+</view>
+
+<view class="mask-no" wx:if="{{mask && total>=testData[0].gte}}">
+  <view class="content">
+    <image src="../../../images/test-no.jpg"></image>
+    <view class="close" catchtap='closePage'>X</view>
+    <view class="ts1">您有 <text>{{total}}</text> 项符合{{testData[0].conditions}}的条件！</view>
+    <view class="ts2"><text>温馨提示：</text>{{testData[0].gtets}}</view>
+    <button class="btnA" open-type='share'>分享</button>
+    <view class="btnB" catchtap='reTest'>重新测试</view>
+  </view>
+</view>
+
+
+

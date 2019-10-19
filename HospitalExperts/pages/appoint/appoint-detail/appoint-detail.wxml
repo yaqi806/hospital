@@ -1,0 +1,65 @@
+<!--pages/appoint/appoint-detail/appoint-detail.wxml-->
+<view class="adv">
+  <image src="../../../images/appoint-detail.jpg"></image>
+</view>
+
+<view class="back">
+  <image src="../../../images/appoint-back.jpg"></image>
+  <image src="{{url}}{{tempData[0].pic}}" class="tx"></image>
+  <view class="content">
+    <view class="one">
+      <text style="font-size:32rpx;">{{tempData[0].name}} </text>
+      <text style="font-size:24rpx;">{{tempData[0].pos}}</text>
+    </view>
+    <view class="two">{{tempData[0].disc}}</view>
+    <view class="three">主治：
+      <text class="attend">{{tempData[0].attend}}</text>
+    </view>
+    <view class="four">
+      <view class="score">综合评分 {{tempData[0].score}}</view>
+      <view class="reserve">预约量 {{tempData[0].reserve}}</view>
+    </view> 
+  </view>
+</view>
+
+<view class="outcalls">
+  <view class="outcalls-title">
+    <image src="../../../images/time-icon.jpg"></image> 出诊时间
+    <text class="kh">（每周日24:00更新本周出诊时间）</text>
+
+    <block wx:for="{{outcallsData}}" wx:key="index">
+      <view class="outcalls-item">
+        <view class="hname">{{item.hname}}</view>
+        <block wx:for="{{item.outcalls}}" wx:for-item="items" wx:key="indexs">
+          <view class="items" catchtap='clickTap' data-outcalls-id="{{items.outid}}">
+            <view>{{items.dt}}（周{{items.wd}}）{{items.aph}}</view>
+            <view>余号：{{items.more}} ></view>
+          </view>
+        </block>
+      </view>
+    </block>
+  </view>
+</view>
+
+
+<view class="appoint-mask" wx:if="{{isShow}}">
+  <view class="appoint-alert">
+    <view class="wb">
+      <view class="title">预约须知</view>
+      <view class="dl">1、预约不收取任何费用，患者预约成功后需持医保卡
+  到医院自助机或挂号窗口交款区号，再到分诊台分诊；</view>
+      <view class="dl">2、医保患者在微信挂号之前，需到院在办卡窗口绑定
+  医保卡和就医卡；</view>
+      <view class="dl">3、预约成功后，请按就诊时间提前到医院取号，就诊
+  单元内（上午、下午）此号有效。不按时就诊的患者，
+  医院不再安排就诊；</view>
+      <view class="dl">4、上午号源7:00 - 10:00；下午号源7:00 - 15:00；</view>
+      <view class="dl">5、每张卡挂号限制：每天限挂两次，每个科室限挂一
+  次，每个微信号30天内限制挂号6次</view>
+    </view>
+    <view class="control">
+      <view class="cancel" catchtap='cancel'>取消</view>
+      <view class="ok" catchtap='appointok'>确定</view>
+    </view>
+  </view>
+</view>

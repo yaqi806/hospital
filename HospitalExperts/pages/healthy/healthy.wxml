@@ -1,0 +1,116 @@
+<!--pages/healthy/healthy.wxml-->
+<view class="healthy-adv">
+  <image src="../../images/healthy-adv.jpg"></image>
+</view>
+
+<view class="healthy-content">
+  <view class="healthy-nav">
+    <text class="healthy-nav-text {{ac==0?'ac':''}}" catchtap='toPage' data-page-index="0">推荐</text>
+    <text class="healthy-nav-text {{ac==1?'ac':''}}" catchtap='toPage' data-page-index="1">讲座学习</text>
+    <text class="healthy-nav-text {{ac==2?'ac':''}}" catchtap='toPage' data-page-index="2">活动科研</text>
+    <text class="healthy-nav-text {{ac==3?'ac':''}}" catchtap='toPage' data-page-index="3">饮食健康</text>
+  </view>
+
+  <view class="healthy-news" wx:if="{{pageIndex==0}}">
+    <block wx:for="{{tempData}}" wx:for-item="item" wx:key="index">
+      <view class="item" catchtap='toDetail' data-healthy-id="{{item.heid}}">
+        <view class="item-left">
+          <view class="item-title"><view wx:if="{{item.ishot==1}}" class="hot">热</view>{{item.title}}</view>
+          <view class="item-view-forward">
+          <image src="../../images/view.jpg"></image>
+          {{item.view}}
+          <!-- <image src="../../images/forward.jpg" class="two"></image>
+          {{item.forward}} -->
+          </view>
+        </view>
+        <view class="item-right">
+          <image src="{{url}}{{item.pic}}"></image>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="healthy-news" wx:if="{{pageIndex==1}}">
+    <block wx:for="{{tempDataOne}}" wx:for-item="item" wx:key="index">
+      <view class="sp">
+        <video src="{{spUrl}}{{shipin}}" controls show-center-play-btn="true"></video>
+      </view>
+      <view class="sp-item">        
+        <view class="sp-item-left">
+          <view class="sp-item-title">{{item.title}}</view>
+          <view class="sp-item-view-forward">
+            <image src="../../images/view.jpg"></image>
+            {{item.view}}
+            <!-- <image src="../../images/forward.jpg" class="two"></image>
+            {{item.forward}} -->
+          </view>
+        </view>
+        <view class="sp-item-right" catchtap='userZan'>
+          <view wx:if="{{isZan==0}}">
+            <image src="../../images/zan.png"></image>
+            <view class="zans">赞({{zannum}})</view>
+          </view>
+          <view wx:else>
+            <image src="../../images/zanno.png"></image>
+            <view class="zans">赞({{zannum}})</view>
+          </view>
+        </view>
+      </view>
+    </block>  
+
+    <swiper indicator-dots='true'>
+      <block wx:for="{{videos}}" wx:for-item="item" wx:for-index="idx" wx:key="index">
+        <swiper-item>
+          <block wx:for="{{item}}" wx:for-item="vd" wx:key="vds">
+            <view class="fm-item" data-sp-id="{{vd.leid}}" catchtap='bofangVideo' style="margin-bottom:38rpx;">
+              <view class="fm-tp">
+                <image src="{{fmUrl}}{{vd.fm}}" class="fm"></image>
+              </view>
+              <view class="fm-bt">{{vd.title}}</view>
+            </view>  
+          </block>
+        </swiper-item>
+      </block>
+    </swiper>
+
+  </view>
+
+  <view class="healthy-news" wx:if="{{pageIndex==2}}">
+    <block wx:for="{{tempDataTwo}}" wx:for-item="item" wx:key="index">
+      <view class="item" catchtap='toDetail' data-healthy-id="{{item.heid}}">
+        <view class="item-left">
+          <view class="item-title"><view wx:if="{{item.ishot==1}}" class="hot">热</view>{{item.title}}</view>
+          <view class="item-view-forward">
+          <image src="../../images/view.jpg"></image>
+          {{item.view}}
+          <!-- <image src="../../images/forward.jpg" class="two"></image>
+          {{item.forward}} -->
+          </view>
+        </view>
+        <view class="item-right">
+          <image src="{{url}}{{item.pic}}"></image>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="healthy-news" wx:if="{{pageIndex==3}}">
+    <block wx:for="{{tempDataThree}}" wx:for-item="item" wx:key="index">
+      <view class="item" catchtap='toDetail' data-healthy-id="{{item.heid}}">
+        <view class="item-left">
+          <view class="item-title"><view wx:if="{{item.ishot==1}}" class="hot">热</view>{{item.title}}</view>
+          <view class="item-view-forward">
+          <image src="../../images/view.jpg"></image>
+          {{item.view}}
+          <!-- <image src="../../images/forward.jpg" class="two"></image>
+          {{item.forward}} -->
+          </view>
+        </view>
+        <view class="item-right">
+          <image src="{{url}}{{item.pic}}"></image>
+        </view>
+      </view>
+    </block>
+  </view>
+
+</view>

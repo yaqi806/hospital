@@ -1,0 +1,99 @@
+/**index.wxss**/
+page{
+  background-color: #f6f6f6;
+}
+.adv{
+  width:100%; height:220rpx;
+}
+.adv image{
+  width:inherit; height:inherit;
+}
+
+.selectProject{
+  width:100%; height: 587rpx;
+  margin-top:30rpx;
+  padding:30rpx 28rpx;
+  background-color:#fff;
+  box-sizing: border-box
+}
+.title{
+    margin-bottom: 10rpx;
+}
+.title image.icon{
+  width:6rpx; height:36rpx;
+  margin-right: 14rpx;
+  vertical-align: middle;
+}
+.title text.title{
+  font-size: 32rpx;
+}
+
+.carousel{
+  position: relative
+}
+.carousel swiper{
+  height: 440rpx;
+}
+.carousel swiper swiper-item{
+  margin:0 5rpx;
+}
+.dots{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -40rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.dot{
+  margin: 0 8rpx;
+  width: 14rpx;
+  height: 14rpx;
+  background: #e1e1e1;
+  border-radius: 8rpx;
+  transition: all .6s;
+}
+.dot.active{
+  width: 40rpx;
+  background: #34b9b6;
+}
+
+.carousel image{
+  width:690rpx; height: 440rpx;
+}
+.project{
+  width:100%;
+  background-color: #fff;
+  padding:30rpx 28rpx;
+  box-sizing: border-box;
+  margin-top:30rpx;
+}
+.project .projectItem{
+  height:176rpx;
+  border-bottom: solid 1px #ddd;
+  margin-bottom: 30rpx;
+  display: flex;
+}
+.project .projectItem image{
+  width:260rpx; height: 143rpx;
+}
+.project .projectItem .content{
+  margin-left: 20rpx;
+}
+.project .projectItem .content .first{
+  font-size: 30rpx;
+  color:#333;
+  margin-bottom: 15rpx;
+}
+.project .projectItem .content .second{
+  font-size: 24rpx;
+  margin-bottom: 15rpx;
+}
+.project .projectItem .content .second .project-pos,
+.project .projectItem .content .third{
+  color:#888
+}
+.project .projectItem .content .third{
+  font-size: 22rpx;
+}

@@ -59,7 +59,7 @@ App({
   }, 
   globalData: {
     userInfo: null,
-    baseUrl: "",
+    baseUrl: "自己的域名",
     appid: '',
     secret: ''
   }

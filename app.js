@@ -60,7 +60,7 @@ App({
   globalData: {
     userInfo: null,
     baseUrl: "自己的域名",
-    appid: '',
+    appid: '自己的appid',
     secret: ''
   }
 })
